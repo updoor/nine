@@ -1,0 +1,40 @@
+
+<!--// project menu //-->
+<div id="project_menus">
+  <div id="projects_tab">
+    <ul>
+<% @my_projects.each do |p| -%>
+      <li><%=link_to(h(p.project_name), p_path({:id => p.code})) %></li>
+<% end -%>
+      <li><%= link_to('new', new_project_path) %></li>
+    </ul>
+  </div><!-- endof tab  -->
+
+<% if @current_project -%>
+  <div id="project_info">
+    [&nbsp;<%=h @current_project.project_name %>&nbsp;]
+    <span><%= display_from_to(@current_project.start_date, @current_project.delivery_date) %></span>
+<% unless @current_project.users.empty? -%>
+    <ul id="project_users">
+<% @current_project.users.each do |u| -%>
+      <li><%=h u.my_name %></li>
+<% end -%>
+    </ul>
+<% end -%>
+  </div>
+  <div id="project_menu">
+    <ul>
+      <li><%= link_to('Dashboard', p_path(@current_project.code)) %></li>
+      <li><%= link_to('WBS', wbs_p_path(@current_project.code)) %></li>
+      <li><%= link_to('Gantt', gantt_p_path(@current_project.code)) %></li>
+      <li><%= link_to('Calendar', calendar_p_path(@current_project.code)) %></li>
+    </ul>
+<ul>
+  <li><%= link_to('events', p_events_path(:p_id => @current_project.project_cd)) %></li>
+  <li><%= link_to('tasks', p_tasks_path(:p_id => @current_project.project_cd)) %></li>
+  <li><%= link_to('milestones', p_milestones_path(:p_id => @current_project.project_cd)) %></li>
+</ul>
+  </div>
+<% end -%>
+</div>
+<!--// endof project menu //-->

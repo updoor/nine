@@ -1,0 +1,8 @@
+.x-grid3-viewport, .x-grid3-locked{
+	overflow:hidden;
+	position:absolute;
+}
+.x-grid3-locked .x-grid3-scroller{
+	overflow:hidden;
+	border-right: 1px solid #99BBE8;
+}

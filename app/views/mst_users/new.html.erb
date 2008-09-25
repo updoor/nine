@@ -1,0 +1,29 @@
+<% content_for(:add_stylesheet) do -%>
+<%= stylesheet_link_tag('app/sessions/signup') %>
+<% end -%>
+
+<div class="content">
+  <div id="signup_form">
+    <% form_for :mst_user, :url => mst_users_path do |f| %>
+    <table>
+      <tr>
+        <th><label for="user_email">メールアドレス</label></th>
+        <td><%= f.text_field :email %></td>
+      </tr>
+      <tr>
+        <th><label for="user_email">お名前</label></th>
+        <td><%= f.text_field :user_name %></td>
+      </tr>
+      <tr>
+        <th><label for="user_email">組織</label></th>
+        <td><%= f.text_field :company_name %></td>
+      </tr>
+    </table>
+<p><%= submit_tag 'Sign up' %></p>
+<% end -%>
+
+<%= error_messages_for :mst_user %>
+
+
+  </div><!--// endof signup_form //-->
+</div><!--// endof content //-->

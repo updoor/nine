@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>9arrows</title>
+<%= stylesheet_link_tag('lib/ext-2.1/ext-all') %>
+<%= stylesheet_link_tag('app/common/static.css') %>
+<%= @content_for_add_stylesheet -%>
+</head>
+<body>
+
+<div id="contents">
+  <div id="headers">
+    <%= link_to('9arrows', url_for('/'), {:id => 'logo'}) %>
+  </div>
+  <div id="system_menu">
+    <ul>
+      <li id="current_user_name"><%=h @current_mst_user.my_name %></li>
+      <li><%= link_to('account', url_for('/account')) %></li>
+      <li><%= link_to('logout', url_for('/logout')) %></li>
+    </ul>
+  </div>
+
+<%= render :partial => 'layouts/project_menu' %>
+
+<%= yield %>
+</div>
+
+</body>
+</html>

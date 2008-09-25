@@ -1,0 +1,12 @@
+/**
+ * app/sessions/signup.css
+ * @uri: /signup (/mst_users/new)
+ */
+
+div#headers { text-align:left; }
+div#headers a#logo {width:70px;height:28px;text-indent:-9999px;display:block;background:url('../../i/logo.gif') no-repeat;}
+
+hr.head_border {height:5px;border:0px none;background:url('../../i/head_border1.gif');}
+
+div.content {padding:10px 20px 20px 20px;background-color:#C8E3FF;}
+div#signup_form {background-color:#FFFFFF;padding:10px;padding-left:40px;text-align:left;}

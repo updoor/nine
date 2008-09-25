@@ -1,0 +1,16 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>9arrows</title>
+<%= stylesheet_link_tag('lib/ext-2.1/ext-all') %>
+<%= stylesheet_link_tag('app/common/static.css') %>
+<%= @content_for_add_stylesheet -%>
+</head>
+<body>
+
+<div id="contents">
+<%= yield %>
+</div>
+
+</body>
+</html>

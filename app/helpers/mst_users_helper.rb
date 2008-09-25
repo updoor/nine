@@ -1,0 +1,2 @@
+module MstUsersHelper
+end

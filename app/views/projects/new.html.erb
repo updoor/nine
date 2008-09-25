@@ -1,0 +1,43 @@
+
+<div class="content">
+<h1>New project</h1>
+
+<div id="new_project_form">
+<% form_for(:dat_project, :url => projects_path, :html => {}) do |p| %>
+  <table>
+    <tr>
+      <th><label for="dat_project_project_name">プロジェクト名</label></th>
+      <td><%= p.text_field :project_name %><%= error_message_on(:dat_project, :project_name) %></td>
+    </tr>
+    <tr>
+      <th><label for="dat_project_project_cd">プロジェクトコード</label></th>
+      <td><%= p.text_field :project_cd %><%= error_message_on(:dat_project, :project_cd) %></td>
+    </tr>
+    <tr>
+      <th><label for="dat_project_end_user_name">表示名</label></th>
+      <td><%= p.text_field :end_user_name %></td>
+    </tr>
+    <tr>
+      <th><label for="dat_project_terms">期間</label></th>
+      <td>
+        <%= p.text_field :start_date, {:style=>'width:100px;'} %>
+        〜
+        <%= p.text_field :delivery_date, {:style=>'width:100px;'} %>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="dat_project_template">テンプレート</label></th>
+      <td><%= select_tag :dat_project_template, [[1, 'test']] %></td>
+    </tr>
+    <tr>
+      <th><label for="dat_project_project_users">参加メンバー</label></th>
+      <td>自分</td>
+    </tr>
+  </table>
+  <div class="submit_area">
+    <%= submit_tag('create') %>
+  </div>
+<% end %>
+</div>
+
+</div>

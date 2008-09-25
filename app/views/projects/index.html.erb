@@ -1,0 +1,13 @@
+
+<div class="content">
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<% if @my_projects -%>
+<ul>
+<% @my_active_projects.each do |p| -%>
+  <li><%= link_to(p.project_name, project_path(:id => p.project_cd)) %></li>
+<% end -%>
+</ul>
+<% end -%>
+</div>

@@ -1,0 +1,15 @@
+/**
+ * app/sesssions/new.css
+ * @uri /login (/sessions/new)
+ */
+
+body {text-align:center;}
+
+div#login_form {width:310px;height:160px;text-align:center;margin-top:200px;margin-left:auto;margin-right:auto;background:url('../../i/sessions/login_header.gif') no-repeat center;}
+div#login_form table {margin-top:60px;margin-left:auto;margin-right:auto;}
+div#login_form table th label {margin-right:10px;color:#FFFFFF;}
+div#login_form table td.submit_area {text-align:right;}
+
+
+div#signup {margin-top:5px;text-align:left;}
+div#signup .signup_trigger {margin-left:10px;padding-left:12px;background:url('../../i/sessions/icon_signup_prefix.gif') no-repeat center left;color:#FFFFFF;}

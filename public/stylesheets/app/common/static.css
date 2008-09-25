@@ -1,0 +1,39 @@
+
+body {margin:0px;padding:0px;
+font:93% "MS P ゴシック",arial,helvetica,clean,sans-serif;*font-size:small;*font:small;
+}
+table {font-size:inherit;font-size:100%;}
+
+div,dl,dt,dd,ul,ol,li,p,pre,table,tr,th,td,label,a {margin:0px;padding:0px;font-size:98%;color:#333333;border:0px solid #666666;}
+
+a {color:#357AA7;text-decoration:underline;}
+hr {margin:0px;height:0px;border:0px none;}
+
+input {padding:2px 4px 2px 4px;}
+
+/**
+ * contents
+ */
+div#contents {text-align:center;}
+
+div#headers { text-align:left; }
+div#headers a#logo {width:70px;height:28px;text-indent:-9999px;display:block;background:url('../../i/logo.gif') no-repeat;}
+
+hr.head_border {height:5px;border:0px none;background:url('../../i/head_border1.gif');}
+
+div.content {padding:10px 20px 20px 20px;text-align:left;}
+
+/* system menu */
+div#system_menu {position:absolute;top:5px;right:20px;text-align:right;}
+div#system_menu ul {list-style:none;}
+div#system_menu ul li {display:inline;margin-left:5px;padding-left:5px;border-left-width:1px;}
+div#system_menu ul li#current_user_name {margin-right:10px;font-weight:bold;border-style:none;}
+
+div#project_menus {text-align:left;}
+div#project_menus ul {list-style:none;display:inline;}
+div#project_menus ul li {display:inline;margin-left:10px;}
+
+/* errors */
+div.fieldWithErrors {display:inline;}
+div.fieldWithErrors input {background-color:#FFCCCC;}
+div.formError {display:inline;color:#FF0000;font-weight:bold;}

@@ -1,0 +1,2 @@
+module Ps::EventsHelper
+end
